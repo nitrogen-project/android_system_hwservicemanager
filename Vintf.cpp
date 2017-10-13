@@ -50,7 +50,7 @@ vintf::Transport getTransport(const std::string &interfaceName, const std::strin
         return tr;
     }
 
-    LOG(WARNING) << "getTransportFromManifest: Cannot find entry "
+    LOG(DEBUG) << "getTransportFromManifest: Cannot find entry "
                  << fqName.string()
                  << " in either framework or device manifest, using default transport.";
     return vintf::Transport::EMPTY;
