@@ -51,7 +51,7 @@ vintf::Transport getTransport(const std::string &interfaceName, const std::strin
         return tr;
     }
 
-    LOG(WARNING) << __FUNCTION__ << ": Cannot find entry "
+    LOG(DEBUG) << __FUNCTION__ << ": Cannot find entry "
                  << fqName.string() << "/" << instanceName
                  << " in either framework or device manifest.";
     return vintf::Transport::EMPTY;
